@@ -6,23 +6,32 @@ var global = window || GLOBAL;
  * Reference the documentation at [ https://lodash.com/docs/4.17.4 ] You should have    *
  * documentation up in a browser window at all times when working on projects!          *
  ****************************************************************************************/
+var testArray = ["cat", "dog", "puppy", "kitten"]
 
 global.bruhdash = {
 
   // returns the first element of an array
-  first: function () {
-      
+  first: function first(arr) {
+    return arr[0];
+    
   },
 
   // returns the last element of an array
-  last: function () {
+  last: function last(arr) {
+    return arr.pop();
 
   },
 
   // returns the index of the first matching element from left to right
-  indexOf: function () {
-
+  indexOf: function (arr, target){
+    for (var i=0; i < arr.length; i++){
+      if (arr[i] === target){
+        return i;
+      }
+    }
+    return -1;
   },
+
 
   // returns the index of the first matching element from right to left
   lastIndexOf: function () {
