@@ -35,7 +35,7 @@ global.bruhdash = {
 
   // returns the index of the first matching element from right to left
   lastIndexOf: function () {
-
+// test
   },
 
   // returns an array with all elements except for the last element
