@@ -48,15 +48,21 @@ global.bruhdash = {
 
 
   // returns an array with all elements except for the last element
-  initial: function (arr, target) {
-    for (var i = 0; i < arr.length; i++){
-      return arr[i]-1;
+  initial: function (arr) {
+    for (var i = 0; i < arr.length-1; i++){
+      console.log(arr[i]);
+      // return arr[arr.length[i]];
+      
     }
-
   },
   
   // returns an array with all falsey values removed
-  compact: function() {
+  compact: function(arr) {
+    for (var i = 0; i < arr.length; i++){
+      if (arr[i] == true){
+      console.log(true);
+     }
+    }
 
   },
 
