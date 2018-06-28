@@ -11,16 +11,19 @@ var testArray = ["cat", "dog", "puppy", "kitten"]
 global.bruhdash = {
 
   // returns the first element of an array
-  first: function first(arr) {
+  first: function (arr) {
     return arr[0];
     
   },
 
   // returns the last element of an array
-  last: function last(arr) {
-    return arr.pop();
-
+  last: function (arr) {
+    for (var i=0; i<arr.length; i++){
+    return arr[arr.length-1];
+    }
   },
+
+  
 
   // returns the index of the first matching element from left to right
   indexOf: function (arr, target){
@@ -45,7 +48,10 @@ global.bruhdash = {
 
 
   // returns an array with all elements except for the last element
-  initial: function () {
+  initial: function (arr, target) {
+    for (var i = 0; i < arr.length; i++){
+      return arr[i]-1;
+    }
 
   },
   
