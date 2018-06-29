@@ -49,21 +49,26 @@ global.bruhdash = {
 
   // returns an array with all elements except for the last element
   initial: function (arr) {
+    var newArr = [];
+    newArr.length = arr.length;
     for (var i = 0; i < arr.length-1; i++){
-      console.log(arr[i]);
-      // return arr[arr.length[i]];
-      
+      newArr[i] = arr[i]; 
     }
+    return newArr
+    
   },
   
   // returns an array with all falsey values removed
   compact: function(arr) {
+    // return arr.filter(Boolean);
+    console.log(arr);
+    var newArr = [];
     for (var i = 0; i < arr.length; i++){
-      if (arr[i] == true){
-      console.log(true);
+      if (arr[i] !== false){
+        newArr[i] = arr[i];
      }
     }
-
+    console.log(newArr);
   },
 
   // creates a slice of an array from the start index up to but not including the end index
