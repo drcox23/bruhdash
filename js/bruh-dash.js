@@ -19,7 +19,7 @@ global.bruhdash = {
   // returns the last element of an array
   last: function (arr) {
     for (var i=0; i<arr.length; i++){
-    return arr[arr.length-1];
+      return arr[arr.length-1];
     }
   },
 
@@ -38,7 +38,7 @@ global.bruhdash = {
 
   // returns the index of the first matching element from right to left
   lastIndexOf: function (arr, target){
-    for (var i=0; i < arr.length-1; i++){
+    for (var i=arr.length-1; i >= 0; i--){
       if (arr[i] === target){
         return i;
       }
@@ -62,8 +62,7 @@ global.bruhdash = {
   compact: function(arr) {
     // console.log(arr);
     var trueArr = [];
-    for (var i = 0; i < arr.length; i++){
-      
+    for (var i = 0; i < arr.length; i++){   
       if (arr[i]){
         trueArr.push(arr[i]);
      }
@@ -75,21 +74,34 @@ global.bruhdash = {
 
   // creates a slice of an array from the start index up to but not including the end index
   slice: function (arr, start, end) {
-    console.log(arr);
+    // console.log(arr);
     newArr = [];
     for (var i = start; i<arr.length; i++){
       if (arr[i] <= end){
-    newArr.push(arr[i])
+      newArr.push(arr[i])
     }
   }
-    console.log(newArr);
+    // console.log(newArr);
     return newArr;
   },
 
   // returns a slice of array with n elements dropped from the beignning
-  drop: function(){
-
-  },
+  drop: function(arr, n){
+    // console.log(arr);
+    newArr = [];
+    
+    if (n >= 0){
+      for (var i = n; i < arr.length; i++){
+        newArr.push(arr[i]);
+     }
+   }else{
+     for (var i = 1; i < arr.length; i++){
+       newArr.push(arr[i]);
+     }
+   }
+    // console.log(newArr);
+    return (newArr);
+},
 
   // returns a slice of array with n elements dropped from the end
   dropRight: function() {
