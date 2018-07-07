@@ -60,7 +60,7 @@ global.bruhdash = {
   
   // returns an array with all falsey values removed
   compact: function(arr) {
-    console.log(arr);
+    // console.log(arr);
     var trueArr = [];
     for (var i = 0; i < arr.length; i++){
       
@@ -68,14 +68,22 @@ global.bruhdash = {
         trueArr.push(arr[i]);
      }
     }
-    console.log(trueArr);
-    console.log(trueArr.length);
+    // console.log(trueArr);
+    // console.log(trueArr.length);
     return(trueArr);
   },
 
   // creates a slice of an array from the start index up to but not including the end index
-  slice: function () {
-
+  slice: function (arr, start, end) {
+    console.log(arr);
+    newArr = [];
+    for (var i = start; i<arr.length; i++){
+      if (arr[i] <= end){
+    newArr.push(arr[i])
+    }
+  }
+    console.log(newArr);
+    return newArr;
   },
 
   // returns a slice of array with n elements dropped from the beignning
