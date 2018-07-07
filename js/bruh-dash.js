@@ -60,15 +60,17 @@ global.bruhdash = {
   
   // returns an array with all falsey values removed
   compact: function(arr) {
-    // return arr.filter(Boolean);
     console.log(arr);
-    var newArr = [];
+    var trueArr = [];
     for (var i = 0; i < arr.length; i++){
-      if (arr[i] !== false){
-        newArr[i] = arr[i];
+      
+      if (arr[i]){
+        trueArr.push(arr[i]);
      }
     }
-    console.log(newArr);
+    console.log(trueArr);
+    console.log(trueArr.length);
+    return(trueArr);
   },
 
   // creates a slice of an array from the start index up to but not including the end index
